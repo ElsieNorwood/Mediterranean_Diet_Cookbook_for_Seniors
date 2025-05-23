@@ -1,0 +1,27 @@
+<!-- menu.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Materials</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('images/menu.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+  <div class="bg-white bg-opacity-90 p-8 rounded-xl shadow-md w-full max-w-md text-center space-y-4">
+    <h2 class="text-2xl font-bold text-gray-700">Choose a Section</h2>
+    <button onclick="window.open('https://drive.google.com/file/d/1Q6rC7t4VqgcRWxXTr9AzPLOeBWMabwSF/preview')" class="block w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">Free eBook Instant Pot Recipes</button>
+    <button onclick="window.open('https://drive.google.com/file/d/1NVUpRirD-mVXU70uNgI6KI5HoTrhjYkM/preview')" class="block w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">Free eBook Extra Cooking Tips</button>
+    <button onclick="window.open('https://docs.google.com/document/d/1CooXqHCgHsh0Vi_JZIoCcXXs0fpsvq_lPXJlcIG2Jp0/preview')" class="block w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">Weekly Shopping List</button>
+  </div>
+</body>
+</html>

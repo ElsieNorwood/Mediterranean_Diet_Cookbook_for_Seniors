@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access to Cookbook Extras</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('images/index.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+  <div class="bg-white bg-opacity-90 p-8 rounded-xl shadow-md w-full max-w-md">
+    <h1 class="text-3xl font-bold mb-2 text-center text-green-800">The Essential Mediterranean Diet Cookbook for Seniors</h1>
+    <p class="text-center text-gray-700 mb-4">Access extras that make eating well easier and more enjoyable every day.</p>
+
+    <form id="signup-form" class="space-y-4">
+      <div>
+        <label class="block mb-1 font-semibold">Name</label>
+        <input name="name" type="text" required class="w-full border rounded px-3 py-2">
+      </div>
+      <div>
+        <label class="block mb-1 font-semibold">Email</label>
+        <input name="email" type="email" required class="w-full border rounded px-3 py-2">
+      </div>
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">Get Access</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('signup-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch('https://script.google.com/macros/s/AKfycbw8ta64yW5FiKwKecWUQw846R2FoyvXRHFQCrRU-s2WMephPQ_utui8ZMfH0i6EerZy/exec', {
+        method: 'POST',
+        body: formData
+      }).then(() => {
+        window.location.href = 'menu.html';
+      }).catch(err => alert('Error submitting the form. Please try again.'));
+    });
+  </script>
+</body>
+</html>
